@@ -39,9 +39,9 @@
     NSString *redHexString   = [RGBhexString substringWithRange:NSMakeRange(0, 2)];
     NSString *greenHexString = [RGBhexString substringWithRange:NSMakeRange(2, 2)];
     NSString *blueHexString  = [RGBhexString substringWithRange:NSMakeRange(4, 2)];
-    CGFloat red   = strtoul([redHexString UTF8String], 0, 16);
-    CGFloat green = strtoul([greenHexString UTF8String], 0, 16);
-    CGFloat blue  = strtoul([blueHexString UTF8String], 0, 16);
+    CGFloat red   = strtoul([redHexString UTF8String], NULL, 16);
+    CGFloat green = strtoul([greenHexString UTF8String], NULL, 16);
+    CGFloat blue  = strtoul([blueHexString UTF8String], NULL, 16);
     return [self zjw_colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
